@@ -1,0 +1,30 @@
+/* pages/order/order-details.wxss */
+page {
+  background-color: #eee;
+}
+.container {
+  padding: 20rpx;
+}
+.top-info {
+  border: 1px solid #dfdfdf;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  background-color: #fff;
+}
+.title {
+  display: flex;
+  align-items: center;
+}
+.title .iconfont {
+  margin-right: 15rpx;
+}
+.text-info {
+  font-size: 28rpx;
+}
+.address {
+  border: 1px solid #dfdfdf;
+  border-radius: 8rpx;
+  padding: 20rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}

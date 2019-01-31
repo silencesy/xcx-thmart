@@ -1,0 +1,19 @@
+<!--pages/order/order-details.wxml-->
+<view class='container'>
+  <view class='top-info'>
+    <view class='theme-color title'>
+      <view class='iconfont icon-xinxi'></view>
+      <view>Notice</view>
+    </view>
+    <view class='text-info'>
+      If you need after-sales service, please contact us within 7 days after you receive the parcel. We will not accept the request if overdue. Thanks for your cooperation and understanding.
+    </view>
+  </view>
+  <view class='address'>
+    <view class='title'>
+      <view class='iconfont icon-shouhuodizhi'></view>
+      <view>Address</view>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,21 @@
+<!--components/base/base-article/base-article.wxml-->
+<view class='article-container'>
+  <image class='banner-img' mode="widthFix" src='{{data.pic}}' bindtap='bindGoList'></image>
+  <view class='article-list'>
+    <view class='article-item' 
+          wx:for="{{data.data}}" 
+          wx:key="{{index}}" 
+          data-id='{{item.id}}' 
+          bindtap='goDetails'>
+      <image class='article-img' src='{{item.pic}}'></image>
+      <view class='article-info'>
+        <view class='article-name'>
+          {{item.title}}
+        </view>
+        <view class='article-date'>
+          {{item.createTime}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<!--pages/guide/guide.wxml-->
+<view class='article-container'>
+  <view class='title' bindtap='tab'>
+    <view class='{{showId==0?"active":""}}' id="0">
+      <text id="0">Latest</text>
+    </view>
+    <view class='{{showId==1?"active":""}}' id="1">
+      <text id="1">Hottest</text>
+    </view>
+  </view>
+  <view class='content'>
+    <swiper bindchange="bindchange" current="{{showId}}" duration="{{duration}}">
+      <swiper-item>
+          <scroll-view scroll-y bindscrolltolower="getData">
+            <pullUpLoading status="{{status}}">
+              <baseArticle data="{{articleData}}" />
+            </pullUpLoading>
+          </scroll-view>
+      </swiper-item>
+      <swiper-item>
+          <scroll-view scroll-y bindscrolltolower="getData2">
+            <pullUpLoading status="{{status2}}">
+              <baseArticle data="{{articleData2}}" />
+            </pullUpLoading>
+          </scroll-view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

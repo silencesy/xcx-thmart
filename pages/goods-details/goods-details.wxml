@@ -1,0 +1,84 @@
+<!--pages/goods-details/goods-details.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='goods-contianer' wx:if="{{goodsData}}">
+  <view class='top-swiper'>
+    <image wx:if="{{goodsData.type=='sale'}}" class='icon sale' src='../../images/sale.png'></image>
+    <image wx:if="{{goodsData.type=='group'}}" class='icon group' src='../../images/group.png'></image>
+    <baseSwiper swiperData="{{goodsData.figure}}" />
+  </view>
+  <view class='info'>
+    <view class='name'>{{goodsData.title}}</view>
+    <view class='price-range' wx:if="{{goodsData.minPrice!=goodsData.maxPrice}}">
+      ￥{{goodsData.minPrice}} - ￥{{goodsData.maxPrice}}
+    </view>
+    <view class='price-range' wx:if="{{goodsData.minPrice==goodsData.maxPrice}}">
+      ￥{{goodsData.minPrice}}
+    </view>
+    <view class='prompt'>
+      * This product ships to Mainland China only.(An extra shipping fee will be charged for HKSAR,MCSAR and other countries/regions)
+    </view>
+  </view>
+  <view class='Specifications' data-type='all' bindtap='openBuyInfo'>
+		Specifications
+    <view class='iconfont icon-combinedshapefuben'></view>
+  </view>
+  <view class='details-title'>
+    Details
+  </view>
+  <view class='info-content'>
+      <template is="wxParse" data="{{wxParseData:detailsdata.nodes}}"/>
+  </view>
+  <view class='goods-bottom-btn'>
+    <view class='home'>
+      <view class='iconfont icon-shanghu1'></view>
+      <view>Home</view>
+    </view>
+    <view class='chat'>
+      <view class='iconfont icon-kefu'></view>
+      <view>Chat</view>
+    </view>
+    <view class='save' bindtap='bindsSaveGoods'>
+      <view class='iconfont icon-shoucang1 {{goodsData.isCollect==1?"theme-color":""}}'></view>
+      <view>Save</view>
+    </view>
+    <view class='add-cart' data-type='cart' bindtap='openBuyInfo'>Add To Cart</view>
+    <view class='buy' data-type='buy' bindtap='openBuyInfo'>Buy Now</view>
+  </view>
+
+  <!-- 选择商品弹出框 -->
+  <i-action-sheet visible="{{ visible }}" show-cancel bind:cancel="handleCancel"  show-cancel="{{ false }}" mask-closable="{{ true }}">
+    <view class='selece-goods-info' slot="header">
+       <view class='single-info'>
+        <image src='{{goodsData.pic}}' data-src="{{goodsData.pic}}" bindtap="previewImage" ></image>
+        <view class='info-text'>
+          <view class='price theme-color' wx:if="{{goodsData.minPrice != goodsData.maxPrice}}">
+            ￥{{goodsData.minPrice}} - ￥{{goodsData.maxPrice}}
+          </view>
+          <view class='price theme-color' wx:if="{{goodsData.minPrice == goodsData.maxPrice}}">
+            ￥{{goodsData.minPrice}}
+          </view>
+          <view class='prompt'>Please select goods</view>
+          <view class='stock'>stock: {{goodsData.sumStock}}</view>
+        </view>
+        <view class='iconfont icon-guanbi' bindtap='handleCancel'></view>
+       </view>
+       <view class='sku-box'>
+        
+       </view>
+       <view class='count'>
+        Quantity
+        <view>
+            <i-input-number value="{{ number }}" min="1" max="{{goodsData.sumStock}}" bindchange="handleChangeNumber" />
+        </view>
+       </view>
+       <view class='done-btn'>
+        <view wx:if="{{type=='buy'}}" class='buy-done'>Done</view>
+        <view wx:if="{{type=='cart'}}" class='cart-done'>Done</view>
+        <view wx:if="{{type=='all'}}" class='cart-buy'>
+          <view>Add To Cart</view>
+          <view>Buy Now</view>
+        </view>
+       </view>
+    </view>
+  </i-action-sheet>
+</view>

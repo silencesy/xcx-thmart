@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "baseSwiper": "/components/base/goods-swiper/swiper",
+    "i-action-sheet": "../../dist/action-sheet/index",
+    "i-input-number": "../../dist/input-number/index"
+  }
+}

@@ -1,0 +1,182 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.4.1",
+	"appid": "wxd6f3b503f5b3b0c2",
+	"projectname": "thMart-x",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 22,
+			"list": [
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "goodsDetails",
+					"pathName": "pages/goods-details/goods-details",
+					"query": "id= 200"
+				},
+				{
+					"id": 2,
+					"name": "articleDetails",
+					"pathName": "pages/article-details/article-details",
+					"query": "id= 42"
+				},
+				{
+					"id": -1,
+					"name": "guied",
+					"pathName": "pages/guide/guide",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shopDetails",
+					"pathName": "pages/shop-details/shop-details",
+					"query": "id= 32"
+				},
+				{
+					"id": -1,
+					"name": "categories",
+					"pathName": "pages/categories/categories",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "deal-group-list",
+					"pathName": "pages/deal-group-list/deal-group-list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "shopList",
+					"pathName": "pages/shop-list/shop-list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "user",
+					"pathName": "pages/account/account",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/cart/cart",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "cart",
+					"pathName": "pages/shop-goods-list/shop-goods-list",
+					"query": "id=all"
+				},
+				{
+					"id": 11,
+					"name": "shop-goods-list",
+					"pathName": "pages/shop-goods-list/shop-goods-list",
+					"query": "class=all&id=10"
+				},
+				{
+					"id": 12,
+					"name": "shop-search",
+					"pathName": "pages/shop-search/shop-search",
+					"query": "id=10"
+				},
+				{
+					"id": 13,
+					"name": "global-search",
+					"pathName": "pages/global-search/global-search",
+					"query": "id=goods"
+				},
+				{
+					"id": 14,
+					"name": "add-address",
+					"pathName": "pages/address-module/add-address",
+					"query": "id=1350"
+				},
+				{
+					"id": -1,
+					"name": "address-list",
+					"pathName": "pages/address-module/address-list",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "add-address",
+					"pathName": "pages/address-module/add-address",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "wishlist",
+					"pathName": "pages/wishlist/wishlist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "coupons",
+					"pathName": "pages/coupons/coupons",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "contact",
+					"pathName": "pages/contact/contact",
+					"query": ""
+				},
+				{
+					"id": 20,
+					"name": "orderlist",
+					"pathName": "pages/order/order-list",
+					"query": "id=0"
+				},
+				{
+					"id": -1,
+					"name": "authorization",
+					"pathName": "pages/authorization/authorization",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "orderDetails",
+					"pathName": "pages/order/order-details",
+					"query": ""
+				}
+			]
+		}
+	}
+}

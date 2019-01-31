@@ -1,0 +1,27 @@
+<!--pages/categories/categories.wxml-->
+<view class='class-container'>
+  <view class='search-row'>
+    <searchRow icon-sousuo="iconfont icon-sousuo search-row" />
+  </view>
+  <view class='flex-row'>
+    <view class='left'>
+      <scroll-view scroll-y>
+        <view data-id='{{item.id}}' bindtap='tab' class='item {{item.id==params.id?"active":""}}' wx:for="{{categoryData}}" wx:key="{{index}}">
+          <text class='line1'>{{item.title}}</text>
+        </view>
+      </scroll-view>
+    </view>
+    <view class='right'>
+        <view class='sort-row'>
+          <sort top="iconfont icon-xiangshangjiantou-copy-copy-copy-copy" 
+          down="iconfont icon-xiangshangjiantou-copy-copy-copy" 
+          bind:sortevent="sortevent"/>
+        </view>
+        <scroll-view scroll-y bindscrolltolower="getData">
+          <pullUpLoading status="{{status}}">
+            <goodsRow rows="4" data="{{data}}" />
+          </pullUpLoading>
+        </scroll-view>
+    </view>
+  </view>
+</view>

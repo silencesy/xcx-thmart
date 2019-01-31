@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "pullUpLoading": "/components/base/pull-up-loading/pull-up-loading",
+    "orderItem": "/components/base/order-item/order-item"
+  }
+}

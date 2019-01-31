@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "goodsRow": "/components/base/goods-row/goods-row",
+    "searchRow": "/components/base/search-row/search-row",
+    "sort": "/components/base/sort/sort",
+    "pullUpLoading": "/components/base/pull-up-loading/pull-up-loading"
+  }
+}

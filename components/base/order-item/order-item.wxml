@@ -1,0 +1,27 @@
+<!--components/base/order-item/order-item.wxml-->
+<view class='order-list'>
+  <view class='item'>
+    <view class='title'>
+      <view>
+        <view class='icon'></view>
+        <view class='order-number'>{{data.orderNumber}}</view>
+      </view>
+      <view class='status' wx:if="{{data.status==0}}">Unpaid</view>
+      <view class='status' wx:if="{{data.status==1}}">Unshipped</view>
+      <view class='status' wx:if="{{data.status==2}}">In Progress</view>
+      <view class='status' wx:if="{{data.status==3}}">Shipped</view>
+      <view class='status' wx:if="{{data.status==4}}">Close</view>
+    </view>
+    <view class='img-box'>
+      <image wx:for="{{data.skuList}}" wx:key="{{index}}" src='{{item.pic}}'></image>
+    </view>
+    <view class='total-price'>
+      <view class=''>Total：<view class='number'>￥{{data.priceTotal}}</view> </view>
+    </view>
+    <view class='bottom-btn'>
+      <view bindtap='bindGoDetails'>Details</view>
+      <view wx:if="{{data.status==0}}">Pay</view>
+      <view wx:if="{{data.status==4 || data.status==3}}">Delete</view>
+    </view>
+  </view>
+</view>
